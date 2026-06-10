@@ -1,6 +1,6 @@
 *{
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:  Helvetica, sans-serif;
 
 }
 .navbar{
@@ -16,6 +16,7 @@
 .nav-logo{
     height: 50px;
     width: 100px;
+    border: 2px solid transparent;
 
 }
 .logo{
@@ -27,3 +28,41 @@
     width: 100%;
 
 }   
+
+
+
+.nav-logo:hover{
+    border: 2px  solid white;
+}
+
+
+.nav-addr-box
+{
+    padding: 10px;
+    
+}
+
+.nav-delivery{
+    font-size:  .5rem ;
+    color: #bdb8b8;
+    margin-left: 20px;
+    margin-top: 0px;
+
+}
+
+.nav-addr-icon{
+    margin-top: -15px;
+}
+
+.nav-location{
+    font-size: 1.25rem;
+    margin-left: 20px;
+}
+
+.nav-addr-box:hover{
+     border: 2px  solid white;
+}
+
+.searchbar{
+
+}
