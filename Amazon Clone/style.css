@@ -1,67 +1,143 @@
-*{
-    margin:0;
-    font-family:  Helvetica, sans-serif;
-
+/* =========================================
+   1. CSS Reset & Global Styles
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Crucial for width/height calculations */
+    font-family:  sans-serif;
 }
-.navbar{
+
+/* =========================================
+   2. Navbar Main Container
+   ========================================= */
+.navbar {
     height: 60px;
-    background-color: #030303;
+    background-color: #4491a8;
     color: white;
     display: flex;
     align-items: center;
     padding: 0 5px;
-   
-
+    gap: 15px; /* Gives nice breathing room between all navbar items */
 }
-.nav-logo{
+
+/* =========================================
+   3. Logo Section
+   ========================================= */
+.nav-logo {
     height: 50px;
     width: 100px;
-    border: 2px solid transparent;
-
+    border: 2px solid transparent; /* Prevents layout shift on hover */
+    cursor: pointer;
 }
-.logo{
-    background-image: url(resources/amazon_logo.png) ;
+
+.nav-logo:hover {
+    border: 2px solid white;
+}
+
+.logo {
+    background-image: url('resources/own.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height:100%;
+    height: 100%;
     width: 100%;
-
-}   
-
-
-
-.nav-logo:hover{
-    border: 2px  solid white;
 }
 
-
-.nav-addr-box
-{
+/* =========================================
+   4. Address/Location Section
+   ========================================= */
+.nav-addr-box {
     padding: 5px;  
+    border: 2px solid transparent; 
+    cursor: pointer;
 }
 
-.nav-delivery{
-    font-size:  .5rem ;
+.nav-addr-box:hover {
+     border: 2px solid white;
+}
+
+.nav-delivery {
+    font-size: 0.5rem; /* Bumped up slightly from .5rem for readability */
     color: #bdb8b8;
-    margin-left: 20px;
-    margin-top: 0px;
-
+    margin-left:0px; /* Indents text to align with location text below */
 }
 
-.nav-addr-icon{
-    margin-top: -15px;
+.nav-addr-icon {
+    display: flex;
+    align-items: center;
 }
 
-.nav-location{
-    font-size: 1.25rem;
-    margin-left: 20px;
+.nav-location {
+    font-size: 1rem;
+    margin-left: 5px;
+    font-weight: bold;
 }
 
-.nav-addr-box:hover{
-     border: 2px  solid white;
+/* =========================================
+   5. Search Bar Section
+   ========================================= */
+/* 1. The Parent Container */
+.search-box {
+    display: flex;
+    align-items: stretch; /* Forces children to fill the height */
+    width: 800px;
+    height: 40px;
+    background-color: white; 
+    border-radius: 4px; 
+    /* You can remove 'overflow: hidden' since we are rounding specific corners */
 }
 
-.searchbar{
+/* 2. Left Side ("All" dropdown) */
+.search-type {
+    background-color: #f3f3f3;
+    color: #0f1111;
+    width: 50px; 
+    height: 100%; /* Force to 40px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* The Fixes: */
+    box-sizing: border-box; 
+    border: none; /* Removes any default browser button borders */
+    border-right: 1px solid #cdcdcd; /* Keeps your divider line */
+    border-radius: 4px 0 0 4px; 
+    
+    font-size: 0.9rem;
+    cursor: pointer;
+}
 
+/* 3. Middle (Text Input) */
+.search-input {
+    flex-grow: 1; 
+    height: 100%; /* Force to 40px */
+    
+    /* The Fixes: */
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0 10px; /* Ensure 0 padding on top/bottom, 10px on left/right */
+    border: none; /* Completely strips the default input border */
+    outline: none; 
+    background-color: transparent; /* Prevents the white background from overlapping oddly */
+    
+    font-size: 1rem;
+}
+
+/* Search Button/Icon (Right side) */
+.search-icon {
+    background-color: #febd69; 
+    width: 45px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #333333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-radius: 0 4px 4px 0; /* Changed commas to spaces here */
+}
+.search-icon:hover {
+    background-color: #f3a847; 
 }
