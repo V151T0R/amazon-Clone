@@ -4,8 +4,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Crucial for width/height calculations */
-    font-family:  sans-serif;
+    box-sizing: border-box; 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 /* =========================================
@@ -17,8 +17,8 @@
     color: white;
     display: flex;
     align-items: center;
-    padding: 0 5px;
-    gap: 15px; /* Gives nice breathing room between all navbar items */
+    padding: 0 15px; 
+    gap: 15px;
 }
 
 /* =========================================
@@ -27,15 +27,20 @@
 .nav-logo {
     height: 50px;
     width: 100px;
-    border: 2px solid transparent; /* Prevents layout shift on hover */
+    border: 2px solid transparent; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 
 .nav-logo:hover {
     border: 2px solid white;
+    border-radius: 4px;
 }
 
 .logo {
+    /* Make sure you have your image in this path */
     background-image: url('resources/own.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -48,83 +53,85 @@
    4. Address/Location Section
    ========================================= */
 .nav-addr-box {
-    padding: 5px;  
+    display: flex;
+    align-items: center; 
+    height: 50px; 
+    padding: 0 8px;  
     border: 2px solid transparent; 
     cursor: pointer;
 }
 
 .nav-addr-box:hover {
      border: 2px solid white;
+     border-radius: 4px;
+}
+
+.fa-location-dot {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    margin-top: 10px; 
+}
+
+.nav-addr-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .nav-delivery {
-    font-size: 0.5rem; /* Bumped up slightly from .5rem for readability */
-    color: #bdb8b8;
-    margin-left:0px; /* Indents text to align with location text below */
-}
-
-.nav-addr-icon {
-    display: flex;
-    align-items: center;
+    font-size: 0.75rem; 
+    color: #e0e0e0;
+    line-height: 1;
 }
 
 .nav-location {
-    font-size: 1rem;
-    margin-left: 5px;
+    font-size: 0.9rem;
     font-weight: bold;
+    line-height: 1.2;
 }
 
 /* =========================================
    5. Search Bar Section
    ========================================= */
-/* 1. The Parent Container */
 .search-box {
     display: flex;
-    align-items: stretch; /* Forces children to fill the height */
-    width: 800px;
+    align-items: center; 
+    flex-grow: 1; 
+    max-width: 900px; 
     height: 40px;
     background-color: white; 
     border-radius: 4px; 
-    /* You can remove 'overflow: hidden' since we are rounding specific corners */
+    overflow: hidden; 
 }
 
-/* 2. Left Side ("All" dropdown) */
 .search-type {
     background-color: #f3f3f3;
     color: #0f1111;
-    width: 50px; 
-    height: 100%; /* Force to 40px */
+    width: auto; 
+    padding: 0 10px;
+    height: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* The Fixes: */
     box-sizing: border-box; 
-    border: none; /* Removes any default browser button borders */
-    border-right: 1px solid #cdcdcd; /* Keeps your divider line */
-    border-radius: 4px 0 0 4px; 
-    
+    border: none; 
+    border-right: 2px solid #cdcdcd; 
     font-size: 0.9rem;
     cursor: pointer;
 }
 
-/* 3. Middle (Text Input) */
 .search-input {
     flex-grow: 1; 
-    height: 100%; /* Force to 40px */
-    
-    /* The Fixes: */
+    height: 100%; 
     box-sizing: border-box; 
-    margin: 0; 
-    padding: 0 10px; /* Ensure 0 padding on top/bottom, 10px on left/right */
-    border: none; /* Completely strips the default input border */
+    padding: 0 10px; 
+    border: none; 
     outline: none; 
-    background-color: transparent; /* Prevents the white background from overlapping oddly */
-    
+    background-color: transparent; 
     font-size: 1rem;
 }
 
-/* Search Button/Icon (Right side) */
 .search-icon {
     background-color: #febd69; 
     width: 45px;
@@ -135,9 +142,122 @@
     font-size: 1.2rem;
     color: #333333;
     cursor: pointer;
+    border: none;
     transition: background-color 0.2s ease;
-    border-radius: 0 4px 4px 0; /* Changed commas to spaces here */
 }
+
 .search-icon:hover {
     background-color: #f3a847; 
+    border-radius: 4px;
+}
+
+/* Adds a glow to the whole box when you click the input inside it */
+.search-box:focus-within {
+    box-shadow: 0 0 0 3px #f3a847; /* Uses your existing orange hover color for the glow */
+    border-radius: 4px; /* Keeps the edges perfectly matched to your box */
+}
+
+/* =========================================
+   6. Right Side Elements (Sign in, Returns)
+   ========================================= */
+.nav-signin, .nav-ret {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    height: 50px; 
+    padding: 0 8px;
+    border: 2px solid transparent; 
+    cursor: pointer;
+}
+
+.nav-signin:hover, .nav-ret:hover {
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.nav-first {
+    font-size: 0.75rem;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.nav-second {
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* =========================================
+   7. Cart Section (Updated)
+   ========================================= */
+.cart {
+    display: flex;
+    align-items: center; 
+    height: 50px;
+    padding: 0 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.cart:hover {
+    border: 2px solid white; 
+    border-radius: 4px;
+}
+
+.cart-icon {
+    background-color: transparent; 
+    height: 40px; 
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem; 
+    color: white; 
+    border: none;
+    cursor: pointer;
+}
+
+/* Glows only while the mouse button is pressed down */
+.cart:active {
+    box-shadow: 0 0 0 3px #f3a847; 
+    border-radius: 4px;
+    border: 2px solid transparent; /* Hides the white hover border while clicking */
+}
+
+/* =========================================
+   8. Responsive Design (Mobile & Tablet)
+   ========================================= */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto; /* Allows the navbar to stretch vertically */
+        flex-wrap: wrap; /* Allows elements to drop to a new line */
+        padding: 10px 15px;
+        justify-content: space-between; /* Spreads out the top row */
+    }
+
+    /* Push the search box to a new line and make it full width */
+    .search-box {
+        order: 5; /* Forces the search bar to the very end of the flex container */
+        width: 100%; 
+        max-width: 100%;
+        margin-top: 10px; /* Adds a little breathing room above the search bar */
+    }
+
+    /* Hide the address and returns sections to save space */
+    .nav-addr-box, .nav-ret {
+        display: none;
+    }
+
+    /* Make the text slightly smaller on mobile */
+    .nav-first {
+        font-size: 0.7rem;
+    }
+    .nav-second {
+        font-size: 0.8rem;
+    }
+
+    /* Adjust the logo size slightly for mobile */
+    .nav-logo {
+        width: 80px;
+    }
 }

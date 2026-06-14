@@ -4,43 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OWN</title>
+    <link rel="icon" type="image/png" href="resources/own.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <div class="navbar">
 
-            <!-- navigaton  logo -->
             <div class="nav-logo">
                 <div class="logo"></div>
             </div>
 
-            <!-- navigation addr-->
-             <div class="nav-addr-box">
-                
-                <div class="nav-addr-icon">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p class="nav-delivery">Delivered to </p>
-                                 
+            <div class="nav-addr-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="nav-addr-text">
+                    <p class="nav-delivery">Delivered to</p>
+                    <p class="nav-location">Bangladesh</p>
                 </div>
+            </div>
 
-                 <p class="nav-location">Bangladesh</p>
-             </div>
+            <div class="search-box">
+                <select class="search-type">
+                    <option>All</option>
+                </select>
+                <input placeholder="Search on OWN" class="search-input">
+                <button class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i> 
+                </button>
+            </div>
 
-             <!-- navigation  search bar -->
-              <div class="search-box">
-                    <select class="search-type">
-                        <option >All </option>
-                    </select>
-                    <input placeholder="Search on OWN" class="search-input">
+            <div class="nav-signin">
+                <span class="nav-first">Hello, sign in</span>
+                <p class="nav-second">Account & Lists</p>
+            </div>
+            
+            <div class="nav-ret">
+                <span class="nav-first">Returns</span>
+                <p class="nav-second">& Orders</p>
+            </div>
 
-                    <div class="search-icon">
-                        <i class="fa-solid fa-magnifying-glass"></i> 
-                    </div>
+            <div class="cart">
+                <button class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                <p class="nav-second">Cart</p>
+            </div>
 
-              </div>
+        </div>
 
+        <div class="banner">
+            <p> hello world !</p>
         </div>
     </header>
 </body>
