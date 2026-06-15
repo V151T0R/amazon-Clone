@@ -13,7 +13,7 @@
    ========================================= */
 .navbar {
     height: 60px;
-    background-color: #4491a8;
+    background-color: #000000;
     color: white;
     display: flex;
     align-items: center;
@@ -260,4 +260,70 @@
     .nav-logo {
         width: 80px;
     }
+}
+
+/* =========================================
+   7. Secondary Nav (Panel) Section
+   ========================================= */
+.panel {
+    height: 40px;
+    background-color: rgb(71, 76, 80); 
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 15px; 
+}
+
+/* The "All" Menu on the far left */
+.panel-all {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    gap: 5px; 
+    padding: 6px 10px;
+    cursor: pointer;
+    border: 2px solid transparent; /* 2px transparent border */
+    border-radius: 4px;            /* 4px rounded corners */
+}
+
+.panel-all:hover {
+    border: 2px solid white; /* 2px white border on hover */
+}
+
+/* The container holding the rest of your links */
+.panel-ops {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    gap: 5px; 
+    margin-left: 10px; 
+}
+
+/* The individual links inside the panel */
+.panel-ops p {
+    padding: 6px 10px; 
+    border: 2px solid transparent; /* 2px transparent border */
+    border-radius: 4px;            /* 4px rounded corners */
+    cursor: pointer;
+    margin: 0; 
+}
+
+.panel-ops p:hover {
+    border: 2px solid white; /* 2px white border on hover */
+}
+
+/* The Deals text on the right */
+.panel-deals {
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 6px 10px;
+    border: 2px solid transparent; /* 2px transparent border */
+    border-radius: 4px;            /* 4px rounded corners */
+    cursor: pointer;
+    margin-left: auto; 
+}
+
+.panel-deals:hover {
+    border: 2px solid white; /* 2px white border on hover */
 }
