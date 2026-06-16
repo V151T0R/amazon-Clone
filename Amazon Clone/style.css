@@ -327,3 +327,9 @@
 .panel-deals:hover {
     border: 2px solid white; /* 2px white border on hover */
 }
+
+.hero-section{
+    background-image: url(resources/hero_image.jpg);
+    background-size: cover;
+    height: 600px;
+}
