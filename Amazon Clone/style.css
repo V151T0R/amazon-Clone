@@ -311,6 +311,7 @@
 
 .panel-ops p:hover {
     border: 2px solid white; /* 2px white border on hover */
+    margin: 2px 0px 0px 0px ;
 }
 
 /* The Deals text on the right */
@@ -332,4 +333,4 @@
     background-image: url(resources/hero_image.jpg);
     background-size: cover;
     height: 600px;
-}
+}  
