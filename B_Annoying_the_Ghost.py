@@ -1,3 +1,5 @@
+import sys
+input = sys.stdin.readline
 
 t = int(input())
 for _ in range(t):
@@ -5,9 +7,18 @@ for _ in range(t):
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     
+    # Each a[i] must be assigned to some b[j] where b[j] >= a[i]
+    # We want to find assignment that minimizes inversions
+    # Greedy: assign each a[i] to smallest possible b[j] >= a[i]
+    
+    # For each a[i], find all valid b[j] (b[j] >= a[i])
+    # Then find assignment minimizing inversions (= adjacent swaps)
+    
+    # Key insight: assign greedily - for each a[i], pick smallest b[j] >= a[i]
+    # Then count inversions in the resulting permutation of indices
     
     used = [False] * n
-    assignment = [-1] * n  
+    assignment = [-1] * n  # assignment[i] = index in b that a[i] maps to
     
     valid = True
     for i in range(n):
@@ -26,7 +37,7 @@ for _ in range(t):
         print(-1)
         continue
     
-    # Counting the  inversions in assignment array
+    # Count inversions in assignment array
     inv = 0
     for i in range(n):
         for j in range(i+1, n):
